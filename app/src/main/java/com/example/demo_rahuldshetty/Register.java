@@ -50,7 +50,6 @@ public class Register extends AppCompatActivity {
                                         Intent activity = new Intent(Register.this,Profile.class);
                                         startActivity(activity);
                                         finish();
-                                        finish();
                                     }
                                     else{
                                         makeToast("Error registering"+task);
@@ -86,7 +85,7 @@ public class Register extends AppCompatActivity {
             makeToast("Password mismatch");
             return false;
         }
-        else if(!email.matches("[a-zA-Z][a-zA-Z0-9_]*@[a-zA-Z0-9]*\\.[a-zA-Z]*"))
+        else if(!email.matches("[a-zA-Z0-9_.%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z0-9_.]{2,}"))
         {
             makeToast("Invalid Email");
             return false;
